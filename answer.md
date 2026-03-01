@@ -1,27 +1,31 @@
 # Answer — Q05: GitHub Actions Workflow with Status Badge
 
-## My Answer
+Repository URL: https://github.com/abbazs/q05-github-actions-badge
 
-_Paste or write your final answer here before submitting._
+## Workflow File
 
----
+The GitHub Actions workflow file needs to be created manually at `.github/workflows/ci.yml`:
 
-## Working Notes
+```yaml
+name: CI
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-_Commands tried, intermediate outputs, reasoning steps..._
-
-```bash
-# scratch area — paste commands / outputs here
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run test
+        run: echo "CI workflow running successfully"
 ```
 
----
+## Status Badge
 
-## Progress Checklist
+The status badge URL: `https://github.com/abbazs/q05-github-actions-badge/actions/workflows/ci.yml/badge.svg`
 
-- [ ] Read the question fully
-- [ ] Identified the expected output format
-- [ ] Wrote a draft answer
-- [ ] Tested locally
-- [ ] Submitted in the exam UI
-- [ ] Clicked **Check** — score updated ✓
-- [ ] **Saved** ✓ (don't change a correct answer!)
+## Note
+
+Due to GitHub token scope restrictions, the workflow file needs to be manually created on GitHub through the web interface or using a personal access token with the `workflow` scope.
