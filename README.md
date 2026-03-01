@@ -4,7 +4,7 @@ This repository demonstrates a simple GitHub Actions CI workflow with a status b
 
 ## CI Status
 
-![CI](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/abbazs/q05-github-actions-badge/actions/workflows/ci.yml/badge.svg)
 
 ## Workflow
 
